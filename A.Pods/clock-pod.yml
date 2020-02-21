@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: clock-pod
+  labels: 
+    app: clock
+    tier: dev
+spec:
+  containers:
+  - name: clock-ctr
+    image: narsingdev/clock:latest

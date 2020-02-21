@@ -1,0 +1,9 @@
+# kubectl create -f countdown-job.yml
+# kubectl get jobs
+# kubectl get pods
+# kubeclt logs countdown-brzdt
+# kubectl describe countdown 
+# kubectl delete countdown
+# kubectl get pods
+
+

@@ -1,0 +1,40 @@
+# kubectl create -f nginx-deply.yml
+# kubectl get deploy -l app=nginx
+# kubectl get rs -l nginx=app
+# kubectl get pod -l app=nginx-app
+# kubectl describe deply nginx-deployment
+
+############# Update Deloyment from nginx:1.7.9 --> nginx:19.1 #############
+
+# kubectl set image deploy nginx-deployment nginx-container=nginx:1.9.1
+# kubectl edit deploy nginx-deployment
+# kubectl rollout status deployment/nginx-deployment
+# kubectl get deploy
+
+########## Rollback Deployment ##################
+
+# kubectl set image deploy nginx-deployment nginx-container=nginx:1.91 --record
+# kubectl rollout status deployment/nginx-deployment
+# kubectl rollout history deployment/nginx-deployment
+# kubeclt rollout undo deployment/nginx-deployment
+# kubectl rollout status deployment/nginx-deployment
+
+######### Scale up Deployment ###################
+
+# kubectl scale deployment nginx-deployment --replicas=2
+# kubectl get deploy
+# kubectl get pods
+
+######## Scale Down Deployment #################
+
+# kubectl scale deployment nginx-deployment --replicas=1
+# kubectl get deploy
+# kubectl get pod -l app=nginx-app
+
+######## To delete Deployment #################
+
+# kubectl delete -f nginx-deploy.yml
+# kubectl get pod -l app=nginx-app
+
+=======================================================================
+

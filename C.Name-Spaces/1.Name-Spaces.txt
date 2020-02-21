@@ -1,0 +1,18 @@
+================================
+To View all the namespaces:
+================================
+	# kubectl get namespaces
+	# kubectl get ns
+
+================================
+To Create namespaces:
+================================
+	# kubectl create namespace project1
+	# kubectl create namespace project2
+	# kubectl run ns-pod --image=nginx --port=80 --generator=run-pod/v1 -n project1
+	# kubectl get pods --namespace project1
+	# kubectl delete pods --all --namespace project1
+	# kubectl delete pods ns-pod --namespace project1
+	# kubectl delete namespace project1
+
+
